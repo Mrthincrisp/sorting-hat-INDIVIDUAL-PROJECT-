@@ -1,0 +1,26 @@
+img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card{
+  margin: 1px;
+display: flex;
+gap: 2px;
+}
+ .war{
+ }
+ .sub-war{
+  width: 50%;
+ }
+.hog{
+display: flex;  
+gap: 4px;
+align-items: flex-end;
+}
+.vold{
+display: flex;  
+gap: 4px;
+align-items: flex-start;
+}
