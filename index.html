@@ -10,8 +10,8 @@
 
 <header>WELCOME</header>
 
-<form>
-<div class="form-floating mb-3">
+<form id="submit-form">
+<div id="nextinline"  class="form-floating mb-3">
   <input type="text" class="form-control" id="name" placeholder="New Student" required>
   <label for="floatingInput"></label>
   <button type="submit" class="btn" id="submit-btn">Get Sorted!</button>
@@ -20,8 +20,8 @@
   Create a Student to sort
 
   
-<div id="sorted" class="sort" style="display: none">
-<div id="btn-cont" class="btn-box" style="display: flex; flex-wrap: wrap; justify-content: center;">
+<div id="sorted" class="sort" style="display: none;">
+<div id="btn-cont" class="btn-box" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
   <button class = "btn" id="all-btn">All Students</button>
   <button class = "btn" id="gryffindor-btn">Gryffindor </button>
   <button class = "btn" id="ravenclaw-btn"> Ravenclaw</button>
@@ -29,15 +29,16 @@
   <button class = "btn" id="slytherin-btn">Slytherin </button>
 </div>
 
-<div id="cards">
+  <div class="war"   >
+<div id="cards" class="sub-war hog" >
 
 </div>
 
-<div id="vold-army" style="display: flex; flex-wrap: wrap; justify-content: center;">
-  vold array
+<div id="vold-army" class="sub-war vold">
+  Something lurks here...
 </div>
-
-</div>
+  </div>
+    </div>
   <script src="main.js"></script>
 </body>
 </html>
