@@ -1,4 +1,5 @@
-const students = [{}] 
+const students = [] 
+
 //iterative mould for arrays to fill 
 const renderCards = (array) => {
   let refStuff = "";
@@ -6,7 +7,7 @@ const renderCards = (array) => {
 refStuff += `<div id="cards" style="background-color: green">
   <h5 class="card-title">${item.name}</h5>
   <p class="card-text">${item.house}</p>
-  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" id="delete--${item.id}" class="btn btn-danger">Danger</button>
 </div>`
   
   })
@@ -35,18 +36,22 @@ const createNewStudent = (e) =>{
     name: document.querySelector("#name").value, 
     house: sort(),
   };
+  const showSorted = document.querySelector("#sorted")
+  showSorted.style.display ="block"
   students.push(newStudent)
   renderCards(students)
   form.reset()
 }
+
+
 form.addEventListener("submit", createNewStudent )
-document.querySelector("#form-submit").addEventListener("click",() => renderCards(students))
+document.querySelector("#submit-btn").addEventListener("submit",() => renderCards(students))
+
 
 const filter = (renderCards, house) =>{
   return renderCards.filter((member)=>
   member.house === house)
-}
-  
+}  
 
 const griffBtn = document.querySelector("#gryffindor-btn")
 const slythBtn = document.querySelector("#slytherin-btn")
@@ -60,8 +65,6 @@ if(selectedHouse === "gryffindor-btn"){
   const gryff = students.filter((item) => item.house === "Gryffindor")
   renderCards(gryff)
 }
-  //const gryff = students.filter((item) => item.house === "Gryffindor");
-
 if(selectedHouse === "slytherin-btn"){
   const slyth = students.filter(item => item.house === "Slytherin")
   renderCards(slyth)
@@ -79,3 +82,34 @@ renderCards(students)
 }
 
 document.querySelector("#btn-cont").addEventListener("click", btnFilter)
+
+
+const voldyArmy = []
+
+const card = document.querySelector(id="#cards")
+
+
+
+
+
+
+
+const newArmy = () => {
+  let ref = "";
+  voldyArmy.forEach((studentName) => {
+    ref += `<div>${studentName}, </div>`;
+  });
+  renderToDom("#vold-army", ref);
+};
+
+card.addEventListener("click", (e) => {
+  if (e.target.id.includes("delete")) {
+    const [, id] = e.target.id.split("--");
+    const index = students.findIndex((student) => student.id === Number(id));
+    const deletedStudentName = students.find((p) => p.id).name;
+    voldyArmy.push(deletedStudentName);
+    students.splice(index, 1);
+  }
+  renderCards(students);
+  newArmy(voldyArmy);
+});
