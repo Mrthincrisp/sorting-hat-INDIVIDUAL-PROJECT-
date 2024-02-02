@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorting Hat</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-<header>WELCOME</header>
-
-<form id="submit-form">
-<div id="nextinline"  class="form-floating mb-3">
-  <input type="text" class="form-control" id="name" placeholder="New Student" required>
-  <label for="floatingInput"></label>
-  <button type="submit" class="btn" id="submit-btn">Get Sorted!</button>
-</div>
-</form>
-  Create a Student to sort
-
+  <header class="welcome" style="color: rgb(244, 163, 33)">WELCOME
+  <p class="welcome" style="font-size: 20px;  color: rgb(244, 163, 33)">Create new students to attend Hogwarts.</p>
   
-<div id="sorted" class="sort" style="display: none;">
-<div id="btn-cont" class="btn-box" style="display: flex; justify-content:center; gap: 10px; margin: 5px;">
-  <button class = "btn" id="all-btn">All Students</button>
-  <button class = "btn" id="gryffindor-btn">Gryffindor </button>
-  <button class = "btn" id="ravenclaw-btn"> Ravenclaw</button>
-  <button class = "btn" id="hufflepuff-btn"> Hufflepuff</button>
-  <button class = "btn" id="slytherin-btn">Slytherin </button>
-</div>
+  
+  <form id="submit-form" class="fill-box" >
+      <input type="text" class="form-control" id="name" style="font-family: 'Nova Square', sans-serif; background-color: rgba(0, 0, 0, 0.509);" placeholder="New Student" required>
+      <button type="submit" class="btn" id="submit-btn" padding="5px">Get Sorted!</button>
+    </form>
+  </header>
+    
+    
+    <div id="sorted" class="sort" style="display: none;">
+      <div id="btn-cont" class="btn-box" style="display: flex; justify-content:center; margin: 5px; gap: 5px">
+        <button class = "btn" id="all-btn">All Students</button>
+        <button class = "btn" id="gryffindor-btn">Gryffindor </button>
+        <button class = "btn" id="ravenclaw-btn"> Ravenclaw</button>
+        <button class = "btn" id="hufflepuff-btn"> Hufflepuff</button>
+        <button class = "btn" id="slytherin-btn">Slytherin </button>
 
-  <div class="war">
-<div id="cards" class="sub-war hog" >
-
-</div>
-
-<div id="vold-army" class="sub-war vold">
-  Something lurks here...
-</div>
-  </div>
-    </div>
-  <script src="main.js"></script>
-</body>
-</html>
+      </div>
+        
+        <div class="war">
+          <div id="cards" class="sub-war hog" >
+            
+          </div>
+          <div id="vold-army" class="sub-war vold" >
+            Something lurks here...
+          </div>
+        </div>
+      </div>
+      <script src="main.js"></script>
+    </body>
+    </html>
