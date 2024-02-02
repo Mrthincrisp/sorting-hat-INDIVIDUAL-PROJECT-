@@ -1,25 +1,87 @@
+body{
+background-color: black;
+background-image: url("https://bookstacked.com/wp-content/uploads/2016/01/Pottermore-Sorting-Hat.jpg");
+object-fit: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 650px;
+font-family: 'Nova Square', sans-serif;
+}
+
 img {
   width: 100px;
-  height: 200px;
-  object-fit: cover;
+  height: 100px;
+}
+.welcome{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+font-size: 80px;
+font-style: bold;
+}
+.intro{
+  text-align: center;
+}
+
+.fill-box{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 8px;
+  gap: 5px;
+}
+.btn{
+  font-family: 'Nova Square', sans-serif;
+  color: darkgoldenrod;
+  background-color: rgba(0, 0, 0, 0.543);
+  border-radius: 5px;
+  box-shadow: 3px;
+  
+}
+.war {
+  display: flex;
+  flex-direction: row;  
+}
+
+.sub-war {
+  width: 100%; 
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 4px;
+  }
+
+.hog {
+  display: flex;
+  position: relative;
+  text-align: center;
+  background-image: url("https://img.freepik.com/free-photo/wooden-floor-background_53876-88628.jpg");
+}
+.card-text{
+  margin: 2px;
+}
+
+.none{
+  margin: 0px;
 }
 
 .card{
-  margin: 1px;
-display: flex;
-gap: 2px;
+  background-image: url("https://i.pinimg.com/736x/91/47/9e/91479e7e42ce44a0fcdf2b9c9171a4d0.jpg");
+  object-fit: cover;
+  padding: 8px;
 }
 
- .sub-war{
-  width: 50%;
- }
-.hog{
-display: flex;  
-gap: 4px;
-align-items: flex-end;
+.vold {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("https://c0.wallpaperflare.com/preview/117/415/702/texture-paper-background-parchment.jpg");
+  object-fit: scale-down;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
 }
-.vold{
-display: flex;  
-gap: 4px;
-align-items: flex-start;
+
+.btn-danger{
+  margin: 2px;
 }
