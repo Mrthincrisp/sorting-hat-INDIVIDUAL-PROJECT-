@@ -6,7 +6,7 @@ const students = []
 const renderCards = (array) => {
   let refStuff = "";
   array.forEach((item) => {
-refStuff += `<div id="cards" style="background-size: cover">
+refStuff += `<div id="cards" class="hog-cards">
 <img src="${backColor(item)}" class="card-img-top" alt="..."
 <p class="none"></p>
   <p class="card-text">${item.name}</p>
@@ -62,7 +62,7 @@ const createNewStudent = (e) =>{  //creates submit function
   showSorted.style.display ="block" //displays the main part of the project
   students.push(newStudent) //adds the new student to the students array
   renderCards(students)  // puts students onto the dom
-  form.reset()  // refreshes the form to have new array shown
+  form.reset()  // resets form elements to default(cleared text)
 }
 
 
